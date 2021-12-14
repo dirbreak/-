@@ -1,0 +1,16 @@
+int jump(int number)
+{
+	if (number < 2)
+		return 1;
+	else
+		return jump(number - 1) + jump(number - 2);
+}
+
+int main()
+{
+	int number = 0;
+	int num = 0;
+	scanf("%d", &n);
+	num = jump(number);
+	printf("%d\n", num);
+	return 0;
