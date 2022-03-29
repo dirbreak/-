@@ -1,0 +1,21 @@
+# -
+学习过程中所练习的代码
+int main()      //使用一个数组慢慢覆盖另一个数组
+{
+    char arr1[] = "welcome to china";
+    char arr2[] = "################";
+    int size = strlen(arr1) - 1;
+    int left = 0;
+    int right = size;
+    while (left <= right)
+    {
+        arr2[left] = arr1[left];
+        arr2[right] = arr1[right];
+        printf("%s\n", arr2);
+        Sleep(1000);// Sleep 库函数 暂停运行，单位是毫米  头文件#include<windows.h>
+        system("cls");//system 库函数 执行系统命令 头文件 #include<stdlib.h>  cls——清空系统屏幕
+        left++; 
+        right--;
+    }
+    return 0;
+}
